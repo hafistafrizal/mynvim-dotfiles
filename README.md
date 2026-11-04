@@ -2,7 +2,7 @@
 
 Konfigurasi personal (*dotfiles*) untuk lingkungan pengembangan saya di Windows dan Linux, yaitu **PowerShell 7** dan kustomisasi terminal dengan **Oh-My-Posh**.
 
-> 📝 **Konfigurasi Neovim sekarang ada di repo terpisah:** [hafistafrizal/nvim-config](https://github.com/hafistafrizal/mynvim-config)
+> 📝 **Konfigurasi Neovim sekarang ada di repo terpisah:** [hafistafrizal/mynvim-config](https://github.com/hafistafrizal/mynvim-config)
 
 ## 📚 Dokumentasi
 
@@ -10,7 +10,7 @@ Setiap konfigurasi punya panduan sendiri:
 
 | Konfigurasi | Isi | Panduan |
 |-------------|-----|---------|
-| 📝 **Neovim** | Config NvChad, LSP, Treesitter, LazyGit | [Repo nvim-config](https://github.com/hafistafrizal/mynvim-config) (repo terpisah) |
+| 📝 **Neovim** | Config NvChad, LSP, Treesitter, LazyGit | [Repo mynvim-config](https://github.com/hafistafrizal/mynvim-config) (repo terpisah) |
 | 💻 **Terminal** | Profil PowerShell 7 dan tema Oh-My-Posh | [powershell/README.md](powershell/README.md) |
 
 ## 📂 Struktur Direktori
