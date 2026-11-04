@@ -5,7 +5,7 @@ Panduan ini menjelaskan dua bagian yang bekerja bersama untuk membentuk tampilan
 - **PowerShell 7** (`powershell/`): profil `$PROFILE` yang dimuat setiap kali terminal dibuka.
 - **Oh-My-Posh** (`oh-my-posh/`): tema prompt kustom `ys.omp.json`.
 
-> ⬅️ Kembali ke [README utama](../README.md) · 📝 Lihat juga [Konfigurasi Neovim](../nvim/README.md)
+> ⬅️ Kembali ke [README utama](../README.md) · 📝 Lihat juga [Konfigurasi Neovim](https://github.com/hafistafrizal/nvim-config) (repo terpisah)
 
 ## 🔗 Cara Kerjanya
 
