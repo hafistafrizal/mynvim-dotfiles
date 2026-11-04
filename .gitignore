@@ -1,0 +1,12 @@
+@'
+# Neovim swap / undo / session
+*.swp
+*.swo
+.DS_Store
+undo/
+swap/
+backup/
+
+# Logs
+*.log
+'@ | Out-File -FilePath "$env:USERPROFILE\dotfiles\.gitignore" -Encoding utf8
