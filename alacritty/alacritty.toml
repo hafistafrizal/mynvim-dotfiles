@@ -1,0 +1,56 @@
+[env]
+MSYS2_PATH_TYPE = "inherit"
+
+# Mengatur PowerShell 7 sebagai default terminal
+[terminal.shell]
+program = "C:\\msys64\\usr\\bin\\zsh.exe"
+args = ["-l"]
+
+[window]
+opacity = 0.95
+padding = { x = 10, y = 10 }
+dynamic_padding = true
+resize_increments = true
+
+[font]
+size = 11.5
+# Menyuruh Alacritty menggambar karakter kotak secara presisi
+builtin_box_drawing = true
+
+# Mengurangi jarak spasi antar baris (ubah ke -2 jika -1 masih kurang rapat)
+[font.offset]
+x = 0
+y = -1
+
+[font.normal]
+family = "JetBrainsMono Nerd Font"
+style = "Regular"
+
+[font.bold]
+family = "JetBrainsMono Nerd Font"
+style = "Bold"
+
+# --- Skema Warna One Dark ---
+[colors.primary]
+background = "#282c34"
+foreground = "#abb2bf"
+
+[colors.normal]
+black   = "#1e2127"
+red     = "#e06c75"
+green   = "#98c379"
+yellow  = "#e5c07b"
+blue    = "#61afef"
+magenta = "#c678dd"
+cyan    = "#56b6c2"
+white   = "#abb2bf"
+
+[colors.bright]
+black   = "#5c6370"
+red     = "#e06c75"
+green   = "#98c379"
+yellow  = "#e5c07b"
+blue    = "#61afef"
+magenta = "#c678dd"
+cyan    = "#56b6c2"
+white   = "#ffffff"
