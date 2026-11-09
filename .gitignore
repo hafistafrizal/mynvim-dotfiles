@@ -1,12 +1,25 @@
-@'
-# Neovim swap / undo / session
+# --- Neovim Temporary & State Files ---
+# Swap file & undo files Neovim
 *.swp
 *.swo
-.DS_Store
-undo/
-swap/
-backup/
+*.swn
+.netrwhist
+*~
 
-# Logs
+# --- Neovim Installed Plugins & Data Cache ---
+# PENTING: Jangan push folder plugin yang di-download oleh lazy.nvim/mason
+nvim/plugin/
+nvim/luarocks/
+nvim/lazy-lock.json.bak
+
+# --- OS & Tool Generated Files ---
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# --- MSYS2 / Zsh History ---
+.zsh_history
+.bash_history
+
+# --- Logs & Crash Dumps ---
 *.log
-'@ | Out-File -FilePath "$env:USERPROFILE\dotfiles\.gitignore" -Encoding utf8

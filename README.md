@@ -1,137 +1,99 @@
-<<<<<<< HEAD
-# 🚀 mynvim-dotfiles
+# 🚀 Windows Dev Environment Dotfiles
 
-Konfigurasi personal (*dotfiles*) untuk lingkungan pengembangan saya di Windows dan Linux, yaitu **PowerShell 7** dan kustomisasi terminal dengan **Oh-My-Posh**.
+![Neovim](https://img.shields.io/badge/NeoVim-%2357A143.svg?&style=for-the-badge&logo=neovim&logoColor=white)
+![Alacritty](https://img.shields.io/badge/Alacritty-%23F46526.svg?&style=for-the-badge&logo=alacritty&logoColor=white)
+![Zsh](https://img.shields.io/badge/Zsh-%23141E30.svg?&style=for-the-badge&logo=terminal&logoColor=white)
+![Windows](https://img.shields.io/badge/Windows-0078D6?style=for-the-badge&logo=windows&logoColor=white)
 
-> 📝 **Konfigurasi Neovim sekarang ada di repo terpisah:** [hafistafrizal/mynvim-config](https://github.com/hafistafrizal/mynvim-config)
+Selamat datang di repositori dotfiles pribadi saya! Ini adalah konfigurasi lingkungan pengembangan (*development environment*) yang sangat dioptimalkan untuk **Windows**, menggunakan **Zsh (MSYS2)**, **Alacritty Terminal**, dan **Neovim (NvChad)**.
 
-## 📚 Dokumentasi
+---
 
-Setiap konfigurasi punya panduan sendiri:
+## ✨ Fitur Utama
 
-| Konfigurasi | Isi | Panduan |
-|-------------|-----|---------|
-| 📝 **Neovim** | Config NvChad, LSP, Treesitter, LazyGit | [Repo mynvim-config](https://github.com/hafistafrizal/mynvim-config) (repo terpisah) |
-| 💻 **Terminal** | Profil PowerShell 7 dan tema Oh-My-Posh | [powershell/README.md](powershell/README.md) |
+- **Terminal Sangat Cepat (GPU-Accelerated)**: Konfigurasi Alacritty dengan tema **One Dark**, *dynamic padding*, dan *transparent background*.
+- **Modern Shell**: Zsh terintegrasi dengan MSYS2 di Windows, dioptimalkan agar waktu *startup* instan (tanpa *lag* saat *load*).
+- **IDE-Like Neovim**: Dibangun di atas [NvChad](https://nvchad.com/), dikonfigurasi khusus agar fitur CLI (seperti `!git`) berjalan mulus menggunakan POSIX shell, bebas dari error path Windows.
+- **Tipografi Bersih**: Menggunakan [JetBrainsMono Nerd Font](https://www.nerdfonts.com/) dengan penyesuaian *line-height* (offset) agar logo terminal dan UI Neovim tidak terputus.
 
-## 📂 Struktur Direktori
+---
 
-```text
-.
-├── powershell/         # Profil PowerShell 7 ($PROFILE)
-│   └── README.md       # Panduan konfigurasi terminal (PowerShell + Oh-My-Posh)
-├── oh-my-posh/         # Tema Oh-My-Posh kustom (ys.omp.json)
-├── .gitignore          # Mengabaikan file swap, backup, dan cache
-├── LICENSE             # Unlicense
-└── README.md           # Dokumentasi utama (file ini)
-```
+## 📦 Persyaratan Sistem (Prerequisites)
 
-## ⚡ Quick Start
+Sebelum memasang dotfiles ini, pastikan sistem Windows kamu sudah terinstal:
 
-**Terminal (PowerShell & Oh-My-Posh)**
+1. **[Alacritty](https://alacritty.org/)** - Terminal emulator.
+2. **[Neovim](https://neovim.io/)** (Minimal v0.9.0+).
+3. **[MSYS2](https://www.msys2.org/)** - Menyediakan Zsh dan *tools* Linux di Windows.
+4. **[Git](https://git-scm.com/)** & **Git Credential Manager Core**.
+5. **[JetBrainsMono Nerd Font](https://www.nerdfonts.com/font-downloads)** (Wajib diinstal di OS Windows).
 
-```bash
-git clone https://github.com/hafistafrizal/mynvim-dotfiles.git ~/dotfiles
-```
-
-Lalu ikuti bagian *Instalasi* di [powershell/README.md](powershell/README.md).
-
-**Neovim**
-
-Neovim memakai repo sendiri dan di-clone langsung ke folder konfigurasi Neovim:
-
-```powershell
-# Windows (PowerShell)
-git clone https://github.com/hafistafrizal/nvim-config.git "$env:LOCALAPPDATA\nvim"
-```
-
-```bash
-# Linux
-git clone https://github.com/hafistafrizal/nvim-config.git ~/.config/nvim
-```
-
-Detail lengkap ada di [README nvim-config](https://github.com/hafistafrizal/nvim-config#readme).
-
-> 💡 Disarankan memasang **Nerd Font** terlebih dahulu, karena dipakai oleh Neovim maupun prompt Oh-My-Posh. Caranya ada di [panduan terminal](powershell/README.md#1-pasang-nerd-font).
-
-## ✨ Sekilas Fitur
-
-- **PowerShell 7 + Oh-My-Posh:** prompt kustom dengan tema `ys.omp.json`.
-- **Neovim + NvChad** (repo terpisah): UI cepat dan estetis, LSP & formatter untuk C, C++, PHP, Python, HTML, CSS, JavaScript, serta integrasi LazyGit.
-
-## 📄 Lisensi
-
-Dirilis di bawah [Unlicense](LICENSE), bebas dipakai, disalin, dan dimodifikasi.
-
-## 👤 Author
-
-[@hafistafrizal](https://github.com/hafistafrizal)
-=======
-# 🚀 mynvim-dotfiles
-
-Konfigurasi personal (*dotfiles*) untuk lingkungan pengembangan saya di Windows dan Linux, yaitu **PowerShell 7** dan kustomisasi terminal dengan **Oh-My-Posh**.
-
-> 📝 **Konfigurasi Neovim sekarang ada di repo terpisah:** [hafistafrizal/nvim-config](https://github.com/hafistafrizal/nvim-config)
-
-## 📚 Dokumentasi
-
-Setiap konfigurasi punya panduan sendiri:
-
-| Konfigurasi | Isi | Panduan |
-|-------------|-----|---------|
-| 📝 **Neovim** | Config NvChad, LSP, Treesitter, LazyGit | [Repo nvim-config](https://github.com/hafistafrizal/nvim-config) (repo terpisah) |
-| 💻 **Terminal** | Profil PowerShell 7 dan tema Oh-My-Posh | [powershell/README.md](powershell/README.md) |
+---
 
 ## 📂 Struktur Direktori
 
 ```text
-.
-├── powershell/         # Profil PowerShell 7 ($PROFILE)
-│   └── README.md       # Panduan konfigurasi terminal (PowerShell + Oh-My-Posh)
-├── oh-my-posh/         # Tema Oh-My-Posh kustom (ys.omp.json)
-├── .gitignore          # Mengabaikan file swap, backup, dan cache
-├── LICENSE             # Unlicense
-└── README.md           # Dokumentasi utama (file ini)
+mynvim-dotfiles/
+├── alacritty/
+│   └── alacritty.toml    # Tema One Dark, Font Offset, & Transparansi
+├── nvim/
+│   ├── init.lua          # Entry point NvChad
+│   └── lua/
+│       ├── options.lua   # Konfigurasi Shell (shellcmdflag = "-c")
+│       ├── mappings.lua  # Shortcut / Keybinds kustom
+│       └── plugins/      # NvimTree config (fs_watcher disabled) & Lazy setup
+├── zsh/
+│   └── .zshrc            # Alias, optimasi startup, fix bracketed paste Zsh
+├── .gitignore            # Mengabaikan file temporary dan cache
+└── README.md             # Dokumentasi Repositori
 ```
 
-## ⚡ Quick Start
+## 🚀 Panduan Instalasi (Installation)
 
-**Terminal (PowerShell & Oh-My-Posh)**
+1. Clone Repositori
+Buka terminal dan clone repositori ini ke folder root kamu:
 
-```bash
-git clone https://github.com/hafistafrizal/mynvim-dotfiles.git ~/dotfiles
+```Bash
+git clone [https://github.com/hafistafrizal/mynvim-dotfiles.git](https://github.com/hafistafrizal/mynvim-dotfiles.git) ~/dotfiles
 ```
 
-Lalu ikuti bagian *Instalasi* di [powershell/README.md](powershell/README.md).
+2. Terapkan Konfigurasi Alacritty
+Salin file `alacritty.toml` ke `folder %APPDATA%` Windows:
 
-**Neovim**
-
-Neovim memakai repo sendiri dan di-clone langsung ke folder konfigurasi Neovim:
-
-```powershell
-# Windows (PowerShell)
-git clone https://github.com/hafistafrizal/nvim-config.git "$env:LOCALAPPDATA\nvim"
+```Bash
+# Jalankan di PowerShell / CMD
+mkdir %APPDATA%\alacritty
+copy %USERPROFILE%\dotfiles\alacritty\alacritty.toml %APPDATA%\alacritty\alacritty.toml
 ```
 
-```bash
-# Linux
-git clone https://github.com/hafistafrizal/nvim-config.git ~/.config/nvim
+3. Terapkan Konfigurasi Neovim
+Backup konfigurasi Neovim lama kamu (jika ada), lalu tautkan/salin folder `nvim` ini:
+
+```Bash
+# Jalankan di PowerShell / CMD
+Move-Item -Path $env:LOCALAPPDATA\nvim -Destination$env:LOCALAPPDATA\nvim.bak -ErrorAction SilentlyContinue
+Copy-Item -Path "$env:USERPROFILE\dotfiles\nvim" -Destination "$env:LOCALAPPDATA\nvim" -Recurse
 ```
+Catatan: Saat Neovim pertama kali dibuka, biarkan Lazy.nvim mengunduh seluruh plugin secara otomatis.
 
-Detail lengkap ada di [README nvim-config](https://github.com/hafistafrizal/nvim-config#readme).
+4. Terapkan Konfigurasi Zsh (MSYS2)
+Buka file `~/.zshrc` di dalam home MSYS2 kamu, lalu panggil file dotfiles ini dengan menambahkan baris berikut di paling bawah:
 
-> 💡 Disarankan memasang **Nerd Font** terlebih dahulu, karena dipakai oleh Neovim maupun prompt Oh-My-Posh. Caranya ada di [panduan terminal](powershell/README.md#1-pasang-nerd-font).
+```Bash
+# Arahkan Zsh MSYS2 untuk membaca konfigurasi dari folder dotfiles
+source /c/Users/LENOVO/dotfiles/zsh/.zshrc
+```
+Muat ulang Zsh dengan perintah: `source ~/.zshrc`
 
-## ✨ Sekilas Fitur
+## 🛠️ Catatan Troubleshooting Khusus Windows
 
-- **PowerShell 7 + Oh-My-Posh:** prompt kustom dengan tema `ys.omp.json`.
-- **Neovim + NvChad** (repo terpisah): UI cepat dan estetis, LSP & formatter untuk C, C++, PHP, Python, HTML, CSS, JavaScript, serta integrasi LazyGit.
+Konfigurasi ini sudah mengatasi beberapa bug umum saat menggunakan Neovim + Zsh di Windows:
 
-## 📄 Lisensi
-
-Dirilis di bawah [Unlicense](LICENSE), bebas dipakai, disalin, dan dimodifikasi.
+- **NvimTree `ENOENT fs_watcher` error:** Diperbaiki dengan mematikan fitur `filesystem_watchers` agar NvimTree tidak bingung membaca path `/c/Users/` dari Zsh.
+- **Garis Putus pada Logo NvChad:** Diperbaiki dengan mengatur `font.offset = { y = -1 }` dan `builtin_box_drawing = true` di Alacritty.
+- **Error** `:!git` (can't open input file /s): Diperbaiki dengan memaksa Neovim menggunakan flag `-c` bawaan POSIX `melalui vim.opt.shellcmdflag = "-c"` di `options.lua`.
+- **Karakter aneh** `[200~` saat Copy-Paste: Diperbaiki dengan unset paste di dalam `.zshrc`.
 
 ## 👤 Author
 
 [@hafistafrizal](https://github.com/hafistafrizal)
->>>>>>> 25596e1 (feat: setup zsh and alacritty config)
