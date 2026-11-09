@@ -50,43 +50,39 @@ mynvim-dotfiles/
 
 ## 🚀 Panduan Instalasi (Installation)
 
-1. Clone Repositori
-Buka terminal dan clone repositori ini ke folder root kamu:
+1. **Clone Repositori**
+   Buka terminal dan clone repositori ini ke folder root kamu:
+    ```Bash
+    git clone https://github.com/hafistafrizal/mynvim-dotfiles.git ~/dotfiles
+    ```
 
-```Bash
-git clone [https://github.com/hafistafrizal/mynvim-dotfiles.git](https://github.com/hafistafrizal/mynvim-dotfiles.git) ~/dotfiles
-```
-
-2. Terapkan Konfigurasi Alacritty
-Salin file `alacritty.toml` ke `folder %APPDATA%` Windows:
-
-```Bash
-# Jalankan di PowerShell / CMD
-mkdir %APPDATA%\alacritty
-copy %USERPROFILE%\dotfiles\alacritty\alacritty.toml %APPDATA%\alacritty\alacritty.toml
-```
+3. **Terapkan Konfigurasi Alacritty**
+   Salin file `alacritty.toml` ke `folder %APPDATA%` Windows:
+    ```Bash
+    # Jalankan di PowerShell / CMD
+    mkdir %APPDATA%\alacritty
+    copy %USERPROFILE%\dotfiles\alacritty\alacritty.toml %APPDATA%\alacritty\alacritty.toml
+    ```
 
 3. Terapkan Konfigurasi Neovim
-Backup konfigurasi Neovim lama kamu (jika ada), lalu tautkan/salin folder `nvim` ini:
-
-```Bash
-# Jalankan di PowerShell / CMD
-Move-Item -Path $env:LOCALAPPDATA\nvim -Destination$env:LOCALAPPDATA\nvim.bak -ErrorAction SilentlyContinue
-Copy-Item -Path "$env:USERPROFILE\dotfiles\nvim" -Destination "$env:LOCALAPPDATA\nvim" -Recurse
-```
-Catatan: Saat Neovim pertama kali dibuka, biarkan Lazy.nvim mengunduh seluruh plugin secara otomatis.
+   Backup konfigurasi Neovim lama kamu (jika ada), lalu tautkan/salin folder `nvim` ini:
+    ```Bash
+    # Jalankan di PowerShell / CMD
+    Move-Item -Path $env:LOCALAPPDATA\nvim -Destination$env:LOCALAPPDATA\nvim.bak -ErrorAction SilentlyContinue
+    Copy-Item -Path "$env:USERPROFILE\dotfiles\nvim" -Destination "$env:LOCALAPPDATA\nvim" -Recurse
+    ```
+   Catatan: Saat Neovim pertama kali dibuka, biarkan Lazy.nvim mengunduh seluruh plugin secara otomatis.
 
 4. Terapkan Konfigurasi Zsh (MSYS2)
-Buka file `~/.zshrc` di dalam home MSYS2 kamu, lalu panggil file dotfiles ini dengan menambahkan baris berikut di paling bawah:
+   Buka file `~/.zshrc` di dalam home MSYS2 kamu, lalu panggil file dotfiles ini dengan menambahkan baris berikut di paling bawah:
+    ```Bash
+    # Arahkan Zsh MSYS2 untuk membaca konfigurasi dari folder dotfiles
+    source /c/Users/LENOVO/dotfiles/zsh/.zshrc
+    ```
+   Muat ulang Zsh dengan perintah: `source ~/.zshrc`
 
-```Bash
-# Arahkan Zsh MSYS2 untuk membaca konfigurasi dari folder dotfiles
-source /c/Users/LENOVO/dotfiles/zsh/.zshrc
-```
-Muat ulang Zsh dengan perintah: `source ~/.zshrc`
 
 ## 🛠️ Catatan Troubleshooting Khusus Windows
-
 Konfigurasi ini sudah mengatasi beberapa bug umum saat menggunakan Neovim + Zsh di Windows:
 
 - **NvimTree `ENOENT fs_watcher` error:** Diperbaiki dengan mematikan fitur `filesystem_watchers` agar NvimTree tidak bingung membaca path `/c/Users/` dari Zsh.
